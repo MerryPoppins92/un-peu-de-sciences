@@ -1,0 +1,101 @@
+{% extends 'generator/base.html' %}
+{% block content %}
+
+<div class=" container text-center mt-4">
+	<h1 class="py-2">Equation du premier degre</h1>
+	<h2>{{ error }}</h2>
+<div class="form-check">
+  <input class="selec form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+  <label class="form-check-label" for="exampleRadios1">
+    2
+  </label>
+</div>
+
+<div class="form-check">
+  <input class="selec form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+  <label class="form-check-label" for="exampleRadios2">
+    3
+  </label>
+</div>
+<form action="{% url 'sysdeq' %}" class="degre2 py-3" id="degre2">
+<br>
+	<input size="2" type="text" name="a">x + <input size="2" type="text" name="b">y + <input size="2" type="text" name="c"> = 0
+<br>
+<input size="2" type="text" name="ap">x + <input size="2" type="text" name="bp">y + <input size="2" type="text" name="cp"> = 0
+<br>
+	<input type="submit" class="btn btn-primary btn-lg my-3">
+<br>
+<a href="{% url 'home' %}" class="btn btn-danger">home</a>
+
+</form>
+
+<form action="{% url 'sysdeq' %}" class="degre3 py-3" id="degre3">
+<br>
+	<input size="2" type="text" name="a">x + <input size="2" type="text" name="b">y + <input size="2" type="text" name="c">z +<input size="2" type="text" name="d"> = 0
+<br>
+<input size="2" type="text" name="ap">x + <input size="2" type="text" name="bp">y + <input size="2" type="text" name="cp">z +<input size="2" type="text" name="dp"> = 0
+<br>
+<input size="2" type="text" name="app">x + <input size="2" type="text" name="bpp">y + <input size="2" type="text" name="cpp">z +<input size="2" type="text" name="dpp"> = 0
+<br>
+	<input type="submit" class="btn btn-primary btn-lg my-3">
+<br>
+<a href="{% url 'home' %}" class="btn btn-danger">home</a>
+
+</form>
+</div>
+<script type="text/javascript">
+
+	var radios = document.getElementsByName("exampleRadios");
+	var cardpayment =  document.getElementById("degre2");
+	var internetpayment =  document.getElementById("degre3");
+	internetpayment.style.display = 'none';
+	/* If Credit Card is selected by default, add these two lines of code.
+	cardpayment.style.display = 'block';   // show
+	internetpayment.style.display = 'none';// hide
+	*/
+
+	for(var i = 0; i < radios.length; i++) {
+	   radios[i].onclick = function() {
+	     var val = this.value;
+	     if(val == 'option1'){  // Assuming your value for radio buttons is radio1, radio2 and radio3.
+	        cardpayment.style.display = 'block';   // show
+	        internetpayment.style.display = 'none';// hide
+	     }
+	     else if(val == 'option2'){
+	         cardpayment.style.display = 'none';
+	         internetpayment.style.display = 'block';
+	     }    
+
+	  }
+	}
+</script>
+
+{% endblock %}
+
+	var selec = $(".selec")
+	if (selec == 1) {
+		console.log(selec.value)
+	} else {
+		console.log(selec.value)
+	}
+		$(":radio[name=exampleRadios]").change(function() {
+    console.log(this.value);
+	});
+
+	alert("Only one payment form is allowed")
+
+
+		// var x = document.getElementsByName("exampleRadios").value;
+	// var x2 = document.getElementById("exampleRadios2").value;
+	// var y = $(".degre2")
+	// var z = $(".degre3")
+	// console.log(x)
+	// if (x == 'option1'){
+		// z.css('display', 'normal')
+	// 	y.css('display', 'none')
+	// }
+
+	// else if (x2 == 'option2') {
+	// 	// y.css('display', 'normal')
+	// 	z.css('display', 'none')
+	// }

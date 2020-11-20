@@ -1,0 +1,18 @@
+{% extends 'generator/base.html' %}
+{% block content %}
+
+<div class=" container text-center mt-4">
+	<h1 class="py-2">Equation du second degre</h1>
+	<h2>{{ error }}</h2>
+<form target="_blank" action="{% url 'seconddegre' %}" class="py-3">
+	
+<br>
+	<input size="2" type="text" name="a">x^2 + <input size="2" type="text" name="b">bx + <input size="2" type="text" name="c">= 0
+<br>
+	<input type="submit" class="btn btn-primary btn-lg my-3">
+<br>
+<a href="{% url 'home' %}" class="btn btn-danger">home</a>
+
+</form>
+</div>
+{% endblock %}

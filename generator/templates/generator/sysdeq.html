@@ -1,0 +1,29 @@
+{% extends 'generator/base.html' %}
+{% block content %}
+
+<div class="container text-center mt-4">
+	<h1 class="py-3">Voici la resolution de votre systeme d'equations</h1>
+	<div class="row">
+		<div class="col">
+			
+			<h2 class="alert alert-success">x = {{ x }}</h2> 
+			<h2 class="alert alert-success">y = {{ y }}</h2>
+			{% if z %}
+			<h2 class="alert alert-success">z = {{ z }}</h2>
+			{% endif %}
+			<!-- {{ password }} renvoie a la fonction dans views -->
+			<br>
+			  <div class="row">
+    <div class="col">
+      <a href="{% url 'home' %}" class="btn btn-danger mb-3">Retour a l'accueil</a>
+    </div>
+    <div class="col">
+      <a href="{% url 'sysdeqpage' %}" class="btn btn-primary">Une Autre?</a>
+    </div>
+  </div>
+		</div>
+	</div>
+</div>
+
+{% endblock %}
+

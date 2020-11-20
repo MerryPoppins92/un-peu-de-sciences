@@ -1,0 +1,23 @@
+{% extends 'generator/base.html' %}
+{% block content %}
+
+<div class="container text-center mt-4">
+<h1 class="py-3">Votre nombre en base 16</h1>
+	<div class="row">
+		<div class="col">
+
+		<h2 class="alert alert-success">{{ b16 }}</h2> 
+		<!-- {{ password }} renvoie a la fonction dans views -->
+		<br>
+			<div class="row">
+				<div class="col">
+					<a href="{% url 'home' %}" class="btn btn-danger mb-3">Retour a l'accueil</a>
+				</div>
+				<div class="col">
+					<a href="{% url 'base16page' %}" class="btn btn-primary">Un nouveau?</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %}

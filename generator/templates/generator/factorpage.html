@@ -1,0 +1,33 @@
+{% extends 'generator/base.html' %}
+{% block content %}
+<div class="container text-center mt-4">
+	<h1 class="py-3">Entrez un nombre pour le decomposer en facteur premier</h1>
+
+	<div class="row">
+		<div class="col">
+<h2> {{ error }} </h2>
+		<form action="{% url 'factor' %}" class="py-5">
+  <div class="form-group ">
+
+    <input type="text" name="num" class="form-control col-5 mx-auto" placeholder="Votre nombre">
+<div class="row">
+
+    <div class="col">
+     <input type="submit" class="btn btn-primary btn-lg mt-4">
+    </div>
+</div>
+{% endblock %}
+
+<div class=" container text-center mt-4">
+<h2> {{ error }} </h2>
+<form action="{% url 'factor' %}">
+	number
+<br>
+	<input type="text" name="num"> 
+<br>
+	<input type="submit" class="btn btn-primary btn-lg mt-4">
+<br>
+<a href="{% url 'home' %}" class="btn btn-danger">home</a>
+
+</form>
+</div>

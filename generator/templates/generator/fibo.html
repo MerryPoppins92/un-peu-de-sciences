@@ -1,0 +1,24 @@
+{% extends 'generator/base.html' %}
+{% block content %}
+
+<div class="container text-center mt-4">
+	<h1 class="py-3">Voici les iterations de la suite de Fibonacci</h1>
+	<div class="row">
+		<div class="col">
+			
+			<h2 class="alert alert-success">{{ fibz }}</h2> 
+			<!-- {{ password }} renvoie a la fonction dans views -->
+			<br>
+			  <div class="row">
+    <div class="col">
+      <a href="{% url 'home' %}" class="btn btn-danger mb-3">Retour a l'accueil</a>
+    </div>
+    <div class="col">
+      <a href="{% url 'fibopage' %}" class="btn btn-primary">Une Autre?</a>
+    </div>
+  </div>
+		</div>
+	</div>
+</div>
+
+{% endblock %}

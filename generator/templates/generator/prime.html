@@ -1,0 +1,22 @@
+{% extends 'generator/base.html' %}
+{% block content %}
+<div class="container text-center mt-4">
+	<h1 class="py-3">Liste de nombres premiers</h1>
+	<div class="row">
+		<div class="col">
+			
+			<h2 class="alert alert-success">{{ test }}</h2> 
+			<!-- {{ password }} renvoie a la fonction dans views -->
+			<br>
+			  <div class="row">
+    <div class="col">
+      <a href="{% url 'home' %}" class="btn btn-danger mb-3">Retour a l'accueil</a>
+    </div>
+    <div class="col">
+      <a href="{% url 'primepage' %}" class="btn btn-primary">Un nouveau?</a>
+    </div>
+  </div>
+		</div>
+	</div>
+</div>
+{% endblock %}

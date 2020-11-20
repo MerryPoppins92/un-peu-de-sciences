@@ -1,0 +1,87 @@
+{% extends 'generator/base.html' %}
+{% block content %}
+
+{% load i18n %}
+<div class="container text-center my-4">
+	<h1 class="py-3">{{ blog.title }}</h1>
+
+	<div class="row">
+		<div class="col">
+
+			{% language 'fr' %}
+				<h2>--{{ blog.date|date:'l d F Y' }}--</h2>
+			{% endlanguage %}
+
+			{% if blog.description1 %}
+			<p class="my-3">{{ blog.description1|safe }}</p>
+			{% endif %}
+			{% if blog.image1 %}
+			<img src="{{ blog.image1.url }}">
+			{% endif %}
+
+			{% if blog.description2 %}
+			<p class="my-3">{{ blog.description2|safe }}</p>
+			{% endif %}
+			{% if blog.image2 %}
+			<img src="{{ blog.image2.url }}">
+			{% endif %}
+
+			{% if blog.description3 %}
+			<p class="my-3">{{ blog.description3|safe }}</p>
+			{% endif %}
+			{% if blog.image3 %}
+			<img src="{{ blog.image3.url }}">
+			{% endif %}
+
+			{% if blog.description4 %}
+			<p class="my-3">{{ blog.description4|safe }}</p>
+			{% endif %}
+			{% if blog.image4 %}
+			<img src="{{ blog.image4.url }}">
+			{% endif %}
+
+			{% if blog.description5 %}
+			<p class="my-3">{{ blog.description5|safe }}</p>
+			{% endif %}
+			{% if blog.image5 %}
+			<img src="{{ blog.image5.url }}">
+			{% endif %}
+
+			{% if blog.description6 %}
+			<p class="my-3">{{ blog.description6|safe }}</p>
+			{% endif %}
+			{% if blog.image6 %}
+			<img src="{{ blog.image6.url }}">
+			{% endif %}
+
+			{% if blog.description7 %}
+			<p class="my-3">{{ blog.description7|safe }}</p>
+			{% endif %}
+			{% if blog.image7 %}
+			<img src="{{ blog.image7.url }}">
+			{% endif %}
+
+			{% if blog.description8 %}
+			<p class="my-3">{{ blog.description8|safe }}</p>
+			{% endif %}
+			{% if blog.image8 %}
+			<img src="{{ blog.image8.url }}">
+			{% endif %}
+
+			{% if blog.description9 %}
+			<p class="my-3">{{ blog.description9|safe }}</p>
+			{% endif %}
+			{% if blog.image9 %}
+			<img src="{{ blog.image9.url }}">
+			{% endif %}
+
+			{% if blog.description0 %}
+			<p class="my-3">{{ blog.description0|safe }}</p>
+			{% endif %}
+			{% if blog.image0 %}
+			<img src="{{ blog.image0.url }}">
+			{% endif %}
+		</div>
+	</div>
+</div>
+{% endblock %}

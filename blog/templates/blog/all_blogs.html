@@ -1,0 +1,19 @@
+{% extends 'generator/base.html' %}
+{% block content %}
+{% load i18n %}
+<div class="container my-4">
+	<h1 class="py-3 text-center">Il y a {{ blogs.count }} blog{{ blogs.count|pluralize }}</h1>
+	<div class="row">
+		<div class="col">
+			{% for blog in blogs %}
+				<a class="navblog" href="{% url 'blog:detail' blog.slug %}"><h2>{{ blog.title }}</h2>
+			{% language 'fr' %}
+				<h5>{{ blog.date|date:'l d F Y' }}</h5></a>
+			{% endlanguage %}
+
+				<p>{{ blog.description1|striptags|truncatechars:200 }}</p>
+			{% endfor %}
+		</div>
+	</div>
+</div>
+{% endblock %}

@@ -1,0 +1,51 @@
+{% extends 'generator/base.html' %}
+{% block content %}
+<div class=" container text-center mt-4">
+<h1 class="py-3">Entrez un nombre et convertisser dans la base de votre choix</h1>
+
+	<div class="row">
+		<div class="col">
+		<h2> {{ error }} </h2>
+			<form action="{% url 'base2' %}">
+				<div class="form-group form-check">
+
+			<input type="text" name="num" class="form-control col-5 mx-auto" placeholder="Taille du mot de passe"> 
+
+			<select class="custom-select form-control col-5 mx-auto my-2" name="choix">
+			  <option value="1">vers base 2</option>
+			  <option value="2">vers base 10</option>
+			</select>
+
+			
+				</div>
+				<input type="submit" class="btn btn-primary btn-lg my-4">
+			</form>
+		</div>
+	</div>
+</div>
+
+{% endblock %}
+
+<div class=" container text-center mt-4">
+<h1 class="py-3">Entrez un nombre et convertisser dans la base de votre choix</h1>
+
+	<div class="row">
+		<div class="col">
+		<h2> {{ error }} </h2>
+			<form action="{% url 'base16' %}">
+				<div class="form-group form-check">
+
+			<input type="text" name="num" class="form-control col-5 mx-auto" placeholder="Taille du mot de passe"> 
+
+			<select class="custom-select form-control col-5 mx-auto my-2" name="choix">
+			  <option value="1">vers base 2</option>
+			  <option value="2">vers base 10</option>
+			</select>
+
+			
+				</div>
+				<input type="submit" class="btn btn-primary btn-lg my-4">
+			</form>
+		</div>
+	</div>
+</div>

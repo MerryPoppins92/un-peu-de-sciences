@@ -1,0 +1,49 @@
+{% extends 'generator/base.html' %}
+{% block content %}
+{% load static %}
+{% load i18n %}
+<style>
+.bimage {
+    height: 100%;
+    width: 100%;
+    background: url("{% static 'generator/parchemin.jpg' %}") no-repeat center center;
+    background-size: 100%;
+}
+</style>
+
+<div class="bimage container center-block py-4 my-4">
+	<h1 class="py-4 text-center">Maths</h1>
+	<ul class="text-center list-inline bg-transparent">
+		<li class="list-group-item bg-transparent">
+	<a href="{% url 'passwordpage' %}">Generateur de mot de passe</a>
+		</li>
+		<li class="list-group-item bg-transparent">
+	<a href="{% url 'sysdeqpage' %}">Systeme d'equations a deux et trois inconnues</a>
+		</li>
+		<li class="list-group-item bg-transparent">
+	<a href="{% url 'primepage' %}">Liste de nombres premiers</a>
+		</li>
+		<li class="list-group-item bg-transparent">
+	<a href="{% url 'fibopage' %}">Iteration d'une suite de Fibonacci</a>
+		</li>
+		<li class="list-group-item bg-transparent">
+	<a href="{% url 'romainpage' %}">Convertisseur en chiffres romains</a>
+		</li>
+		<li class="list-group-item bg-transparent">
+	<a href="{% url 'factorpage' %}">Decomposition en facteur premier</a>
+		</li>
+		<li class="list-group-item bg-transparent">
+	<a href="{% url 'base16page' %}">Convertisseur en base 16</a>
+		</li>
+		<li class="list-group-item bg-transparent">
+	<a href="{% url 'base2page' %}">Convertisseur en base 2</a>
+		</li>
+		<li class="list-group-item bg-transparent">
+	<a href="{% url 'seconddegrepage' %}">Equation du second degre</a>
+		</li>
+		<li class="list-group-item bg-transparent">
+	<a href="{% url 'cesaerpage' %}">Code de Cesar</a>
+		</li>
+	</ul>
+</div>
+{% endblock %}
